@@ -18,7 +18,7 @@ LangChain 聊天提示词模板（ChatPromptTemplate）示例
 """
 
 
-import os
+
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_openai import ChatOpenAI
 
@@ -43,8 +43,7 @@ prompt_template = chatPromptTemplate.invoke({"history": history_data}).to_string
 
 llm = ChatOpenAI(
     model="glm-5",
-    api_key=os.getenv("OPENAI_API_KEY"),
-    base_url="https://api.lkeap.cloud.tencent.com/plan/v3"
+   
 )
 
 chain = chatPromptTemplate | llm

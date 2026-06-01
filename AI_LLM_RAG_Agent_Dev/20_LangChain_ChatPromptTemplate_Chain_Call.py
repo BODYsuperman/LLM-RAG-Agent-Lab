@@ -32,11 +32,7 @@ prompt_template = chatPromptTemplate.invoke({"history": history_data}).to_string
 
 
 
-model = ChatOpenAI(
-    model="glm-5",
-    api_key=os.getenv("OPENAI_API_KEY"),
-    base_url="https://api.lkeap.cloud.tencent.com/plan/v3"
-)
+model = ChatOpenAI(model="glm-5") 
 
 #create a chain by linking the prompt template and the model 
 # must implement RunnableSerializable interface, so that it can be invoked or streamed
@@ -47,10 +43,9 @@ chain = chatPromptTemplate | model
 res = chain.invoke({
     "history": history_data
 })
-print(res.content)
+#print(res.content)
 
 for chunk in chain.stream({
     "history": history_data
 }):
-    print(chunk.content, end="")
-    
+    print(chunk.content, end="", flush=True)
