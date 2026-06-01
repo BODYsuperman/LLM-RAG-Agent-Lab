@@ -18,3 +18,19 @@ PromptTemplate / FewShotPromptTemplate 中 format 与 invoke 的对比示例
 上的差异。
 """
 
+
+
+from langchain_core.prompts import (
+    FewShotPromptTemplate,
+    PromptTemplate,
+)
+
+template = PromptTemplate.from_template("我的领居是{lastname},喜欢吃{food}。  ")
+
+res = template.format(lastname="张三", food="苹果")  # 返回字符串
+
+print(res, type(res))
+
+res2 = template.invoke({"lastname": "李四", "food": "香蕉"})  # 返回 PromptValue 对象
+
+print(res2, type(res2))
