@@ -1,0 +1,8 @@
+source,info
+mysql,Relational database management system
+redis,In-memory data structure store used as cache
+nacos,Service registry and configuration center
+seata,Distributed transaction solution
+langchain,LangChain is a framework for building LLM applications.
+chroma,Chroma is an open-source vector database.
+rag,RAG combines retrieval and generation to reduce hallucinations.
