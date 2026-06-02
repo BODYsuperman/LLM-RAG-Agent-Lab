@@ -1,0 +1,9 @@
+{
+  "students": "ikun",
+  "age": 18,
+  "hobby": ["sing", "dance", "rap"],
+  "other": {
+    "addr": "beijing",
+    "tel": "123456789"
+  }
+}
