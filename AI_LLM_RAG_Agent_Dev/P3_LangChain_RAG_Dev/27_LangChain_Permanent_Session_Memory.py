@@ -27,7 +27,7 @@ LangChain 长期会话记忆示例
 
 import json
 import os
-from typing import Any, Dict, Sequence
+from typing import  Sequence
 
 from dotenv import load_dotenv
 from langchain_core.chat_history import BaseChatMessageHistory

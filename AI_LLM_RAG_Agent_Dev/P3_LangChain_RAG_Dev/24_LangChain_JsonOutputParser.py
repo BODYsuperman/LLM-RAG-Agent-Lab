@@ -26,7 +26,7 @@ LangChain JsonOutputParser JSON输出解析器示例
 - 数据处理：在链式调用中，需要将第一个模型的输出转换为第二个提示词模板所需的格式
 """
 
-from langchain_core.messages import AIMessage
+
 from langchain_core.output_parsers import JsonOutputParser, StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI

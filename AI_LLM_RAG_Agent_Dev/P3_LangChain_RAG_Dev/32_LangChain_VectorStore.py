@@ -26,7 +26,6 @@ LangChain 向量存储（Vector Store）使用示例
 - RAG：检索增强生成，结合向量检索和大语言模型的生成能力
 """
 
-import os
 
 from langchain_community.document_loaders import CSVLoader
 from langchain_ollama import OllamaEmbeddings
