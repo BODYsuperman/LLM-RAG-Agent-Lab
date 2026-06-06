@@ -1,0 +1,3 @@
+persist_directory: ./chroma_db
+collection_name: default_collection
+embedding_function: default

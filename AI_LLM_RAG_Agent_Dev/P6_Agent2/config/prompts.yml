@@ -1,0 +1,8 @@
+system_prompt: |
+  You are a helpful AI assistant. Answer the user's question based on the provided context.
+  If you don't know the answer, say "I don't know".
+
+rag_template: |
+  Context: {context}
+  Question: {question}
+  Answer:
