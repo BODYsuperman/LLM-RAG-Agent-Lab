@@ -6,7 +6,7 @@ import sys
 if __name__ == "__main__":
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from utils.path_tool import get_abs_path
+from path_tool import get_abs_path
 
 from datetime import datetime
 from logging.handlers import TimedRotatingFileHandler
@@ -67,6 +67,7 @@ def get_logger(
 
     return logger
 
+
 def _build_log_file_path(name: str) -> str:
     """
     根据 logger 名称和当前日期生成日志文件路径。
@@ -76,6 +77,9 @@ def _build_log_file_path(name: str) -> str:
     safe_name = name.replace(":", "_").replace("/", "_")
     filename = f"{safe_name}_{datetime.now().strftime('%Y%m%d')}.log"
     return os.path.join(LOG_ROOT, filename)
+
+
+logger = get_logger()
 
 if __name__ == "__main__":
     """

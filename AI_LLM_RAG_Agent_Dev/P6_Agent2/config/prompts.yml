@@ -1,8 +1,3 @@
-system_prompt: |
-  You are a helpful AI assistant. Answer the user's question based on the provided context.
-  If you don't know the answer, say "I don't know".
-
-rag_template: |
-  Context: {context}
-  Question: {question}
-  Answer:
+main_prompt_path: prompts/main_prompt.txt
+rag_summarize_prompt_path: prompts/rag_summarize.txt
+report_prompt_path: prompts/report_prompt.txt
