@@ -6,7 +6,7 @@ import sys
 if __name__ == "__main__":
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from path_tool import get_abs_path
+from utils.path_tool import get_abs_path
 
 from datetime import datetime
 from logging.handlers import TimedRotatingFileHandler

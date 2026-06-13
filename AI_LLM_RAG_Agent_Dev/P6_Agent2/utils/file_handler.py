@@ -1,6 +1,6 @@
 import os
 import hashlib
-from logger_handler import logger
+from utils.logger_handler import logger
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.document_loaders import TextLoader
 from langchain_core.documents import Document
@@ -62,8 +62,8 @@ def pdf_loader(file_path: str, passwd = None)-> list[Document]:
     return PyPDFLoader(file_path, passwd).load()
 
 
-def text_loader(file_path: str, passwd = None)-> list[Document]:
-    return TextLoader(file_path, passwd).load()
+def text_loader(file_path: str)-> list[Document]:
+    return TextLoader(file_path, encoding= "utf-8").load()
 
             
         

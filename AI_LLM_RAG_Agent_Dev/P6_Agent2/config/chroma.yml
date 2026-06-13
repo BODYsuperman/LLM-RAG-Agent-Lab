@@ -1,3 +1,27 @@
-persist_directory: ./chroma_db
-collection_name: default_collection
-embedding_function: default
+collection:
+  # 向量集合名称
+  name: agent
+
+retrieval:
+  # 检索时返回的相似向量数量
+  k: 3
+
+storage:
+  # 数据存储路径
+  data_path: data
+  # MD5 校验文件存储路径
+  md5_hex_store: md5.text
+
+knowledge:
+  # 允许的知识文件类型
+  allow_knowledge_file_type: [".txt", ".pdf"]
+
+processing:
+  # 文本分块大小
+  chunk_size: 200
+  # 分块重叠大小
+  chunk_overlap: 20
+  # 文本分块分隔符（按优先级排序）
+  separators: ["\n\n", "\n", ". ", "! ", "?", ""]
+
+persist_directory: chroma_db
